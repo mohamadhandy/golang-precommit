@@ -1,9 +1,6 @@
 default_install_hook_types: [commit-msg]
 repos:
-- repo: local
-  hooks:
-    - id: check-commit-message
-      name: check-commit-message
-      entry: ./check-commit-message.sh
-      language: script
-      pass_filenames: false
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v1.2.3
+    hooks:
+    -   id: trailing-whitespace
